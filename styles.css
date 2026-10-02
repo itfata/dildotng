@@ -1443,6 +1443,20 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+    max-width: 430px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .hero__content,
   .offer-card > div:first-child,
   .gift-card__content,
@@ -1457,17 +1471,35 @@ h3 {
     line-height: 1.05;
     white-space: normal;
     overflow-wrap: anywhere;
+    text-align: center;
   }
 
   .hero__subtitle,
   .hero__microcopy {
     max-width: 100%;
     overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  .hero__content > *,
+  .offer-card,
+  .gift-card,
+  .countdown-card {
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .offer-card__prices {
     flex-wrap: wrap;
     gap: 4px 10px;
+    justify-content: center;
+  }
+
+  .offer-card > div:first-child {
+    flex: 1 1 auto;
+    text-align: center;
   }
 
   .price--new {
@@ -1488,6 +1520,11 @@ h3 {
   .countdown__item {
     width: 100%;
     min-width: 0;
+  }
+
+  .countdown-card,
+  .countdown-card > div:first-child {
+    text-align: center;
   }
 
   .sticky-cta {
